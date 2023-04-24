@@ -1,0 +1,48 @@
+Participante[] array = new Participante[listaParticipantes.size()];  
+        array = listaParticipantes.toArray(array);
+        ArrayList<Participante> arrayAux = new ArrayList<>();
+        String lastUsernameSaved = "";
+        Participante ultimoParticipante = null;
+
+        for(Participante user : listaParticipantes){
+            String currentUsername = user.getNombre();
+            if((ultimoParticipante != null)&&(!lastUsernameSaved.equals(currentUsername))){
+                System.out.println("User: " + user.getNombre());
+                user.sumarPuntos(ultimoParticipante.getPuntaje());
+                arrayAux.add(user);
+                lastUsernameSaved = currentUsername;
+            }
+            user.sumarPuntos(user.getPuntaje());
+            ultimoParticipante = user;
+            System.out.println("Puntaje del ultimo: " + ultimoParticipante.getPuntaje());
+        }
+        objGesParticipantes.setParticipantes(arrayAux);
+        for(Participante user : objGesParticipantes.getParticipantes()){
+            System.out.println("Los puntos de acierto del pronostico de " + user.getNombre() + " fueron: " + user.getPuntaje());
+        }
+
+////////////// Otro modulo///////////////
+Participante[] array = new Participante[participantes.size()];  
+        array = participantes.toArray(array);
+        ArrayList<Participante> arrayAux = new ArrayList<>();
+        String lastUsernameSaved = "";
+        Participante ultimoParticipante = null;
+for(Participante user : participantes){
+            String currentUsername = user.getNombre();
+            if((ultimoParticipante != null)&&(!lastUsernameSaved.equals(currentUsername))){
+                user.sumarPuntos(user.getPuntaje() + ultimoParticipante.getPuntaje());
+                arrayAux.add(user);
+                lastUsernameSaved = currentUsername;
+            }
+            else if(ultimoParticipante != null){
+                user.sumarPuntos(user.getPuntaje() + ultimoParticipante.getPuntaje());
+            }
+            else{
+                user.sumarPuntos(user.getPuntaje());
+            }
+           
+            System.out.println("User: " + user.getNombre());
+            System.out.println("Puntaje: " + user.getPuntaje() + "\n");
+            ultimoParticipante = user;
+        }
+        this.participantes = arrayAux;

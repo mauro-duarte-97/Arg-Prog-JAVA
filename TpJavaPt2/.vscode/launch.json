@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Pronostico.Main",
+            "projectName": "TpJava_9b818008",
+            "args": [
+                "C:/Users/m_d_1/OneDrive/Escritorio/Programacion/Trabajos_Java/TpJava/TpJava/Resultados.csv",
+                "C:/Users/m_d_1/OneDrive/Escritorio/Programacion/Trabajos_Java/TpJava/TpJava/Pronostico.csv"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "C:/Users/m_d_1/OneDrive/Escritorio/Programacion/Trabajos_Java/TpJava/TpJava/Resultados.csv",
+                "C:/Users/m_d_1/OneDrive/Escritorio/Programacion/Trabajos_Java/TpJava/TpJava/Pronostico.csv"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
