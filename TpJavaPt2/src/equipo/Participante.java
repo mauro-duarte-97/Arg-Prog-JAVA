@@ -28,4 +28,6 @@ public class Participante {
     public void sumarPuntos(int puntos) {
         this.puntaje = puntaje + puntos;
     }
+   
 }
+
